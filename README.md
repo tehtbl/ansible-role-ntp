@@ -22,9 +22,23 @@ This example is taken from `molecule/default/playbook.yml`:
   gather_facts: false
 
   roles:
-    - role: tehtbl.bootstrap
+    - role: tehtbl.cron
     - role: tehtbl.ntp
-      ntp_parameter: value
+
+```
+
+The machine you are running this on, may need to be prepared, I use this playbook to ensure everything is in place to let the role work.
+
+```yaml
+---
+- name: Prepare
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  roles:
+    - tehtbl.bootstrap
+
 ```
 
 Role Variables
@@ -38,6 +52,30 @@ These variables are set in `defaults/main.yml`:
 # defaults file for ntp
 # ------------------------------------------------------------------------
 
+# A list of IP addresses to listen on.
+ntp_interfaces:
+  - address: 127.0.0.1
+
+# A list of IP addresses and options to allow NTP traffic from.
+ntp_restrict:
+  - address: 127.0.0.1
+  # - address: ::1
+
+# A list of NTP pools and their options.
+ntp_pool:
+  - name: 0.pool.ntp.org iburst
+  - name: 1.pool.ntp.org iburst
+  - name: 2.pool.ntp.org iburst
+  - name: 3.pool.ntp.org iburst
+
+# A list of NTP servers and their options.
+# ntp_server:
+#   - name: ntp.example.com
+#     options:
+#       - iburst
+
+# The timezone.
+ntp_timezone: Europe/Berlin
 
 ```
 
@@ -52,6 +90,7 @@ The following roles can be installed to ensure all requirements are met, using `
 ```yaml
 ---
 - tehtbl.bootstrap
+- tehtbl.cron
 
 ```
 

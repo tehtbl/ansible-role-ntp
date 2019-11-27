@@ -18,8 +18,9 @@ galaxy_info:
         - bionic
 
   galaxy_tags:
-    - bootstrap
-    - installer
+    - ntp
+    - ntpd
+    - client
     - server
     - system
     - debian
