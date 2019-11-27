@@ -1,0 +1,27 @@
+---
+# ------------------------------------------------------------------------
+# tasks file for ntp
+# ------------------------------------------------------------------------
+
+- name: install ntp
+  package:
+    name: "{{ ntp_packages }}"
+    state: present
+  register: ntp_install_ntp
+  until: ntp_install_ntp is succeeded
+  retries: 3
+
+- name: configure ntp
+  template:
+    src: "{{ ntp_config_file }}.j2"
+    dest: "{{ ntp_config_directory }}/{{ ntp_config_file }}"
+  notify:
+    - restart ntp
+
+- name: start and enable ntp
+  service:
+    name: "{{ ntp_service }}"
+    state: started
+    enabled: true
+  when:
+    - ansible_virtualization_type != "docker"

@@ -1,0 +1,30 @@
+# Molecule's temporary data
+.molecule
+# Tox's temporary data
+.tox
+# Vi's temporary data
+.swp
+
+
+
+MANIFEST
+docs/_build
+build
+dist
+external
+borg-env
+.tox
+*.egg-info
+*.pyc
+*.pyd
+*.so
+.idea/
+.cache/
+
+.coverage
+.coverage.*
+.vagrant
+.eggs
+
+*.log
+

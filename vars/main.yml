@@ -1,0 +1,10 @@
+---
+# ------------------------------------------------------------------------
+# vars file for ntp
+# ------------------------------------------------------------------------
+
+_ntp_packages:
+  default:
+    - ntp
+
+ntp_packages: "{{ _ntp_packages[ansible_os_family] | default(_ntp_packages['default']) }}"
