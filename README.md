@@ -1,5 +1,5 @@
 <!-- get id via: ansible-galaxy info tehtbl.ntp | grep -i "id:" -->
-<a href="https://galaxy.ansible.com/tehtbl/ntp"><img src="https://img.shields.io/ansible/role/44496"/></a> <a href="https://galaxy.ansible.com/tehtbl/ntp"><img src="https://img.shields.io/ansible/quality/44496"/></a> <a href="https://travis-ci.org/tehtbl/ansible-role-ntp"><img src="https://travis-ci.org/tehtbl/ansible-role-ntp.svg?branch=master" alt="Build status"/></a>
+<a href="https://galaxy.ansible.com/tehtbl/ntp"><img src="https://img.shields.io/ansible/role/44972"/></a> <a href="https://galaxy.ansible.com/tehtbl/ntp"><img src="https://img.shields.io/ansible/quality/44972"/></a> <a href="https://travis-ci.org/tehtbl/ansible-role-ntp"><img src="https://travis-ci.org/tehtbl/ansible-role-ntp.svg?branch=master" alt="Build status"/></a>
 
 Role Description
 ================
