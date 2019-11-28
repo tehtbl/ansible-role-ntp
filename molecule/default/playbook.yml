@@ -7,4 +7,3 @@
   roles:
     - tehtbl.cron
     - role: ntp
-      ntp_parameter: value

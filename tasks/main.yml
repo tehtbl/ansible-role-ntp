@@ -38,6 +38,6 @@
   service:
     name: "{{ ntp_service }}"
     state: started
-    enabled: yes
+    enabled: true
   when:
     - ansible_virtualization_type != "docker"

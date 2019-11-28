@@ -9,14 +9,15 @@ Install and configure ntp on a system.
 Example Playbook
 ================
 
-This example is taken from `molecule/default/playbook.yml`:
+This example is taken from `molecule/default/playbook.yml` and is tested on each push, pull request and release.
 
 ```yaml
 ---
 # ------------------------------------------------------------------------
 # Install and configure ntp
 # ------------------------------------------------------------------------
-- name: ntp
+---
+- name: Converge
   hosts: all
   become: true
   gather_facts: false
