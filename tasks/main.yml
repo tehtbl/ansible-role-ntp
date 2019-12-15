@@ -32,7 +32,7 @@
   when:
     - ntp_timezone_supported | bool
   notify:
-    - restart cron
+    - restart ntp
 
 - name: start and enable {{ ntp_service }}
   service:
