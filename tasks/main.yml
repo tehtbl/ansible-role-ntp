@@ -15,8 +15,13 @@
   template:
     src: "{{ ntp_configuration_file }}.j2"
     dest: /etc/{{ ntp_configuration_file }}
-  notify:
-    - restart ntp
+
+- name: restart ntp
+  service:
+    name: "{{ ntp_service }}"
+    state: restarted
+  when:
+    - ansible_virtualization_type != "docker"
 
 - name: install timezone information
   package:
@@ -31,8 +36,13 @@
     name: "{{ ntp_timezone }}"
   when:
     - ntp_timezone_supported | bool
-  notify:
-    - restart ntp
+
+- name: restart ntp
+  service:
+    name: "{{ ntp_service }}"
+    state: restarted
+  when:
+    - ansible_virtualization_type != "docker"
 
 - name: start and enable {{ ntp_service }}
   service:
