@@ -1,0 +1,10 @@
+---
+gid: 44972
+name: ntp
+desc: Install and configure NTP on your system.
+reqs:
+  - tehtbl.bootstrap
+  - tehtbl.cron
+tags:
+  - ntp
+  - ntpd
