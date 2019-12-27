@@ -2,8 +2,8 @@
 galaxy_info:
   author: https://github.com/tehtbl
   role_name: ntp
-  description: Install and configure ntp on a system.
-  license: GNU General Public License v3.0
+  description: Install and configure NTP on your system.
+  license: MIT License
   company: None
   min_ansible_version: 2.8
 
@@ -27,5 +27,4 @@ galaxy_info:
     - ubuntu
     - linux
 
-dependencies:
-  - tehtbl.bootstrap
+dependencies: []

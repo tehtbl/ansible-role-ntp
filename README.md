@@ -4,7 +4,7 @@
 Role Description
 ================
 
-Install and configure ntp on a system.
+Install and configure NTP on your system.
 
 Example Playbook
 ================
@@ -13,18 +13,14 @@ This example is taken from `molecule/default/playbook.yml` and is tested on each
 
 ```yaml
 ---
-# ------------------------------------------------------------------------
-# Install and configure ntp
-# ------------------------------------------------------------------------
----
 - name: Converge
   hosts: all
   become: true
   gather_facts: false
 
   roles:
-    - role: tehtbl.cron
-    - role: tehtbl.ntp
+    - tehtbl.tehtbl.cron
+    - tehtbl.role: ntp
 
 ```
 
@@ -34,11 +30,11 @@ The machine you are running this on, may need to be prepared, I use this playboo
 ---
 - name: Prepare
   hosts: all
-  become: yes
-  gather_facts: no
+  become: true
+  gather_facts: false
 
   roles:
-    - tehtbl.bootstrap
+    - tehtbl.role: tehtbl.bootstrap
 
 ```
 
@@ -84,12 +80,11 @@ Requirements
 ============
 
 - Access to a repository containing packages, likely on the internet.
-- A recent version of Ansible (Tests run on the current, previous and next release of Ansible).
+- A recent version of Ansible. (Tests run on the current, previous and next release of Ansible.)
 
 The following roles can be installed to ensure all requirements are met, using `ansible-galaxy install -r requirements.yml`:
 
 ```yaml
----
 - tehtbl.bootstrap
 - tehtbl.cron
 
@@ -173,7 +168,7 @@ vagrant up
 License
 =======
 
-GNU General Public License v3.0
+MIT License
 
 Author Information
 ==================
