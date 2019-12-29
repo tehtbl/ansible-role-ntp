@@ -6,3 +6,4 @@
 
   roles:
     - role: tehtbl.bootstrap
+    - role: tehtbl.cron

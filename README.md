@@ -19,8 +19,7 @@ This example is taken from `molecule/default/playbook.yml` and is tested on each
   gather_facts: false
 
   roles:
-    - tehtbl.tehtbl.cron
-    - tehtbl.role: ntp
+    - role: tehtbl.ntp
 
 ```
 
@@ -34,7 +33,8 @@ The machine you are running this on, may need to be prepared, I use this playboo
   gather_facts: false
 
   roles:
-    - tehtbl.role: tehtbl.bootstrap
+    - role: tehtbl.bootstrap
+    - role: tehtbl.cron
 
 ```
 
@@ -64,12 +64,6 @@ ntp_pool:
   - name: 1.pool.ntp.org iburst
   - name: 2.pool.ntp.org iburst
   - name: 3.pool.ntp.org iburst
-
-# A list of NTP servers and their options.
-# ntp_server:
-#   - name: ntp.example.com
-#     options:
-#       - iburst
 
 # The timezone.
 ntp_timezone: Europe/Berlin

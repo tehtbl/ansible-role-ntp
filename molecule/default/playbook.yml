@@ -5,5 +5,4 @@
   gather_facts: false
 
   roles:
-    - tehtbl.cron
     - role: ntp

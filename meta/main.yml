@@ -27,4 +27,7 @@ galaxy_info:
     - ubuntu
     - linux
 
-dependencies: []
+dependencies:
+  - tehtbl.bootstrap
+  - tehtbl.cron
+  
