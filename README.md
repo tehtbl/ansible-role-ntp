@@ -9,7 +9,7 @@ Install and configure NTP on your system.
 Example Playbook
 ================
 
-This example is taken from `molecule/default/playbook.yml` and is tested on each push, pull request and release.
+This example is taken from `molecule/default/converge.yml` and is tested on each push, pull request and release.
 
 ```yaml
 ---
@@ -99,8 +99,9 @@ This role has been tested on these [Docker](https://hub.docker.com/) images:
 |debian|stable|no|
 |debian|testing|no|
 |debian|unstable|yes|
-|ubuntu|xenial|no|
+|ubuntu|xenial|yes|
 |ubuntu|bionic|no|
+|ubuntu|focal|no|
 |ubuntu|devel|yes|
 
 This role has been tested on these Ansible versions:
@@ -172,4 +173,4 @@ Author Information
 Sources
 =======
 
-This work is based on the great work of many people, e.g. [robertdebock](https://github.com/robertdebock) and [geerlingguy](https://github.com/geerlingguy). Thank you!
+This work is based on the great work of many people, e.g. [Robert de Bock](https://github.com/robertdebock), [Jeff Geerling](https://github.com/geerlingguy) and [Thomas Waldmann](https://github.com/ThomasWaldmann). Thank you!
