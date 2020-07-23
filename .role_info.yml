@@ -4,7 +4,6 @@ name: ntp
 desc: Install and configure NTP on your system.
 deps:
   - tehtbl.bootstrap
-  - tehtbl.cron
 tags:
   - ntp
   - ntpd
