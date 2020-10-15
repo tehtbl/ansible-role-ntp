@@ -2,8 +2,7 @@
 gid: 44972
 name: ntp
 desc: Install and configure NTP on your system.
-deps:
-  - tehtbl.bootstrap
+deps: []
 tags:
   - ntp
   - ntpd
